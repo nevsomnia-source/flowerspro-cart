@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flowers Pro</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #000;
-        font-family: sans-serif;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+}
 
-    .card {
-        position: relative;
-        width: 100vw;   /* ширина экрана */
-        height: 100vh;  /* высота экрана */
-        overflow: hidden;
-    }
+.card {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
 
-    .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* чтобы изображение заполнило экран */
-        display: block;
-    }
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* изображение растягивается на весь экран */
+    display: block;
+}
 
-    .btn {
-        position: absolute;
-        width: 130px;   /* примерная ширина кнопки на мобильном */
-        height: 25px;   /* примерная высота кнопки */
-        cursor: pointer;
-        display: block;
-        text-decoration: none;
-    }
+/* кнопки */
+.btn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    /* размеры кнопки привязаны к исходной картинке */
+    width: calc(474 / 360 * 100%);  /* исходная ширина кнопки 474px, картинка 360px */
+    height: calc(70 / 640 * 100%);  /* исходная высота кнопки 70px, картинка 640px */
+}
 
-    /* Кнопки привязаны процентами относительно экрана */
-    .btn-site { top: 41%; left: 0; }  /* примерно y263/640 = 41% */
-    .btn-vk   { top: 61%; left: 0; }  /* y390/640 ≈ 61% */
-    .btn-tg   { top: 81%; left: 0; }  /* y517/640 ≈ 81% */
+/* положение кнопок в процентах относительно исходной картинки 360x640 */
+.btn-site { top: calc(263 / 640 * 100%); left: 0; }
+.btn-vk   { top: calc(390 / 640 * 100%); left: 0; }
+.btn-tg   { top: calc(517 / 640 * 100%); left: 0; }
 
 </style>
 </head>
@@ -48,10 +49,8 @@
 
 <div class="card">
 
-    <!-- Фон -->
-    <img src="IMG_20251125_104045_933.png" alt="FlowersPro" />
+    <img src="IMG_20251125_104045_933.png" alt="FlowersPro">
 
-    <!-- Кнопки -->
     <a class="btn btn-site" href="https://flowerspro96.ru/" target="_blank"></a>
     <a class="btn btn-vk" href="https://vk.com/flowersprovp" target="_blank"></a>
     <a class="btn btn-tg" href="https://t.me/flowerspro_vp" target="_blank"></a>
