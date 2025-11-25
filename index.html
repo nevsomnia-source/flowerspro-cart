@@ -30,16 +30,27 @@
         position: absolute;
         width: 474px;
         height: 70px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0; /* x = 0 */
         cursor: pointer;
         display: block;
+        border: 2px solid #fff;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        text-decoration: none;
     }
 
-    /* ТРИ ТОЧНЫЕ КНОПКИ */
-    .btn-site { top: 350px; }
-    .btn-vk   { top: 525px; }
-    .btn-tg   { top: 700px; }
+    /* Анимация при наведении */
+    .btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    /* ТОЧНЫЕ КООРДИНАТЫ КНОПОК */
+    .btn-site { top: 463px; }
+    .btn-vk   { top: 688px; }
+    .btn-tg   { top: 911px; }
 
 </style>
 </head>
@@ -49,7 +60,7 @@
 <div class="card">
 
     <!-- ТВОЁ ФОНОВОЕ ИЗОБРАЖЕНИЕ -->
-    <img src="IMG_20251125_093937_136.png" alt="FlowersPro" />
+    <img src="YOUR_IMAGE_URL_HERE.jpg" alt="FlowersPro" />
 
     <!-- КНОПКИ -->
     <a class="btn btn-site" href="https://flowerspro96.ru/" target="_blank"></a>
