@@ -15,31 +15,31 @@
 
     .card {
         position: relative;
-        width: 360px;   /* ширина изображения */
-        height: 640px;  /* высота изображения */
-        margin: 0 auto;
+        width: 100vw;   /* ширина экрана */
+        height: 100vh;  /* высота экрана */
+        overflow: hidden;
     }
 
     .card img {
         width: 100%;
         height: 100%;
+        object-fit: cover; /* чтобы изображение заполнило экран */
         display: block;
     }
 
     .btn {
         position: absolute;
-        width: 270px;   /* оставила твою ширину кнопки */
-        height: 40px;
-        left: 0;        /* x = 0 */
+        width: 130px;   /* примерная ширина кнопки на мобильном */
+        height: 25px;   /* примерная высота кнопки */
         cursor: pointer;
         display: block;
         text-decoration: none;
     }
 
-    /* ТОЧНЫЕ КООРДИНАТЫ КНОПОК */
-    .btn-site { top: 263px; }
-    .btn-vk   { top: 390px; }
-    .btn-tg   { top: 517px; }
+    /* Кнопки привязаны процентами относительно экрана */
+    .btn-site { top: 41%; left: 0; }  /* примерно y263/640 = 41% */
+    .btn-vk   { top: 61%; left: 0; }  /* y390/640 ≈ 61% */
+    .btn-tg   { top: 81%; left: 0; }  /* y517/640 ≈ 81% */
 
 </style>
 </head>
@@ -48,10 +48,10 @@
 
 <div class="card">
 
-    <!-- ТВОЁ ФОНОВОЕ ИЗОБРАЖЕНИЕ -->
+    <!-- Фон -->
     <img src="IMG_20251125_104045_933.png" alt="FlowersPro" />
 
-    <!-- КНОПКИ -->
+    <!-- Кнопки -->
     <a class="btn btn-site" href="https://flowerspro96.ru/" target="_blank"></a>
     <a class="btn btn-vk" href="https://vk.com/flowersprovp" target="_blank"></a>
     <a class="btn btn-tg" href="https://t.me/flowerspro_vp" target="_blank"></a>
